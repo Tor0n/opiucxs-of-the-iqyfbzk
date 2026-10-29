@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bkjlgruyi87fc"]
+
+[ext_resource type="PackedScene" uid="uid://cqmfe26ibfrqc" path="res://scenes/land/ledge.tscn" id="1_xltum"]
+[ext_resource type="PackedScene" uid="uid://da4hye7p3tbvw" path="res://scenes/objects/crate_rockets.tscn" id="2_v7cvh"]
+
+[node name="A1OverviewLedge" type="Node3D" unique_id=338431738]
+
+[node name="Ledge" parent="." unique_id=1126024684 instance=ExtResource("1_xltum")]
+transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="CrateRockets" parent="." unique_id=76561863 instance=ExtResource("2_v7cvh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, 7)
+
+[node name="CrateRockets2" parent="." unique_id=662360860 instance=ExtResource("2_v7cvh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2, 8)
+
+[editable path="Ledge"]

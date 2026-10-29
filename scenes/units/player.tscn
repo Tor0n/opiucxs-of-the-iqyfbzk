@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://kv7d7ogddpk7"]
+
+[ext_resource type="Script" uid="uid://p0t6bdbwht7y" path="res://script/units/player.gd" id="1_pkbir"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esfxm"]
+albedo_color = Color(0.5882353, 1, 0.78431374, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pkbir"]
+material = SubResource("StandardMaterial3D_esfxm")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0wfyh"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
+height = 2.2
+radius = 1.2
+
+[node name="Player" type="CharacterBody3D" unique_id=284797262]
+script = ExtResource("1_pkbir")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=973445994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_pkbir")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=152578567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_0wfyh")
+
+[node name="MeleeDamageArea" type="Area3D" parent="." unique_id=292458325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeleeDamageArea" unique_id=116545255]
+shape = SubResource("CylinderShape3D_g4v7s")
+debug_color = Color(0.9916907, 0.07212154, 0.1285128, 0.41960785)
+
+[node name="ShootPoint" type="Marker3D" parent="." unique_id=786357672]

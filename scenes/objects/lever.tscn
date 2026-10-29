@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bwgf5de3klhr0"]
+
+[ext_resource type="Material" uid="uid://di2he5lqlhlhw" path="res://materials/lever_material.tres" id="1_06vmi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
+radius = 1.0
+
+[node name="LeverNode" type="Node3D" unique_id=26828834]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1591766758]
+size = Vector3(0.3, 0.3, 0.1)
+material = ExtResource("1_06vmi")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1449084050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18882523, 0)
+size = Vector3(0.05, 0.4, 0.05)
+material = ExtResource("1_06vmi")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1112715119]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=248679320]
+shape = SubResource("SphereShape3D_yf5fn")

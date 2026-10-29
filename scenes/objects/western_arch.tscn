@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dbyuqm5bogad"]
+
+[ext_resource type="Material" uid="uid://c38j0e34t14oa" path="res://materials/arch_material.tres" id="1_34ndc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yf5fn"]
+material = ExtResource("1_34ndc")
+size = Vector3(1, 10, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_wrtto"]
+material = ExtResource("1_34ndc")
+left_to_right = 1.0
+size = Vector3(7, 2, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1, 10, 1)
+
+[node name="WesternArch" type="Node3D" unique_id=2015645522]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1681817133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5, 0)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=656315555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 6, 0)
+mesh = SubResource("PrismMesh_wrtto")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1498839430]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1086942559]
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=232451737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, 0)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2" unique_id=1287541752]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 6, 0)
+mesh = SubResource("PrismMesh_wrtto")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2" unique_id=463581581]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D" unique_id=16956269]
+shape = SubResource("BoxShape3D_g4v7s")

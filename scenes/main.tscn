@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c2m7b0l3m4fjg"]
+
+[ext_resource type="PackedScene" uid="uid://bkjlgruyi87fc" path="res://scenes/zones/a_1_overview_ledge.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://kv7d7ogddpk7" path="res://scenes/units/player.tscn" id="2_sugp2"]
+
+[node name="Main" type="Node3D" unique_id=1117984676]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=198511292]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 112, 15)
+
+[node name="A1OverviewLedge" parent="." unique_id=338431738 instance=ExtResource("1_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+
+[node name="Player" parent="." unique_id=284797262 instance=ExtResource("2_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 102, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2080852148]
+transform = Transform3D(0.9659258, -0.25881904, 0, 0.066987306, 0.25000003, 0.9659258, -0.25, -0.93301266, 0.25881907, 0, 0, 0)
+light_energy = 0.6
